@@ -5921,3 +5921,16 @@ section,
   padding-bottom: 60px;
   /* Add your styles here */
 }
+
+/* Example CSS for the overlay */
+.image-overlay {
+    /* Choose your color and opacity (e.g., a dark blue, 70% opaque) */
+    background-color: rgba(0, 50, 100, 0.7); 
+    border-radius: 8px; /* Match the service-item border-radius */
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+/* Optional: Darken the overlay slightly on hover for a subtle effect */
+.service-item:hover .image-overlay {
+    background-color: rgba(0, 50, 100, 0.8); /* Slightly darker on hover */
+}
