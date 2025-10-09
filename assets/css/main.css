@@ -5922,15 +5922,30 @@ section,
   /* Add your styles here */
 }
 
-/* Example CSS for the overlay */
+/* Add this to your existing CSS or directly in the style attribute */
 .image-overlay {
-    /* Choose your color and opacity (e.g., a dark blue, 70% opaque) */
-    background-color: rgba(0, 50, 100, 0.7); 
-    border-radius: 8px; /* Match the service-item border-radius */
-    transition: background-color 0.3s ease; /* Smooth transition for hover */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* This is the key change for the dark overlay */
+    background-color: rgba(0, 0, 0, 0.6); /* Adjust the last number (0.6) for more/less transparency */
+    
+    display: flex;
+    align-items: flex-end; /* Keeps content at the bottom */
+    padding: 20px;
+    border-radius: 8px; /* Match the service-item border-radius for consistency */
 }
 
-/* Optional: Darken the overlay slightly on hover for a subtle effect */
-.service-item:hover .image-overlay {
-    background-color: rgba(0, 50, 100, 0.8); /* Slightly darker on hover */
+/* Also ensure your text within the overlay is white */
+.image-overlay .service-details h5,
+.image-overlay .service-details p,
+.image-overlay .service-details li {
+    color: #fff !important; /* Use !important if other styles are overriding */
+}
+
+/* If you have specific text-shadow for readability, keep it */
+.image-overlay .service-details {
+    text-shadow: 0 0 4px rgba(0,0,0,0.9); /* Adds a subtle shadow to make white text pop on complex backgrounds */
 }
