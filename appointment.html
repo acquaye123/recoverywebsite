@@ -11,6 +11,7 @@
   <!-- Favicons -->
   <link href="assets/img/RECOVERY PNG.png" rel="icon">
   <link href="aassets/img/RECOVERY PNG.png" rel="apple-touch-icon">
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -168,25 +169,15 @@
           <input type="email" id="email" class="form-control" placeholder="Your Email" required>
         </div>
 
-        <div class="col-md-6">
-          <input type="tel" id="phone" class="form-control" placeholder="Your Phone Number" required>
-        </div>
-
-        <div class="col-md-6">
-          <input type="date" id="date" class="form-control" required>
-        </div>
-        <!-- <div class="col-md-6">
-            <input type="file" class="form-control" id="fileInput" accept=".pdf,.doc,.docx,.jpg,.png">
-          </div> -->
 
         <div class="col-12">
-          <textarea class="form-control" id="message" rows="5" placeholder="Please describe your symptoms or reason for visit (optional)"></textarea>
-        </div>
+       <button
+  type="button"
+  class="btn btn-appointment w-100"
+  onclick="Calendly.initPopupWidget({ url: 'https://calendly.com/recoveryworkplacehealth-info-rr_j/30min' }); return false;">
+  <i class="bi bi-calendar-plus me-2"></i>Book Appointment
+</button>
 
-        <div class="col-12">
-          <button type="submit" class="btn btn-appointment w-100">
-            <i class="bi bi-calendar-plus me-2"></i>Book Appointment via WhatsApp
-          </button>
         </div>
 
       </div>
@@ -210,16 +201,19 @@
               </div>
             </div><!-- End Step -->
 
-            <div class="col-lg-3 col-md-6">
-              <div class="step-item">
-                <div class="step-number">2</div>
-                <div class="step-icon">
-                  <i class="bi bi-calendar-event"></i>
-                </div>
-                <h5>Choose Date</h5>
-                <p>Select your preferred date and time slot from available options</p>
-              </div>
-            </div><!-- End Step -->
+           <div class="col-lg-3 col-md-6">
+  <div class="step-item" style="cursor:pointer;"
+       onclick="Calendly.initPopupWidget({ url: 'https://calendly.com/recoveryworkplacehealth-info-rr_j/30min' }); return false;">
+       
+    <div class="step-number">2</div>
+    <div class="step-icon">
+      <i class="bi bi-calendar-event"></i>
+    </div>
+    <h5>Choose Date</h5>
+    <p>Select your preferred date and time slot from available options</p>
+  </div>
+</div>
+
 
             <div class="col-lg-3 col-md-6">
               <div class="step-item">
@@ -362,13 +356,18 @@ Preferred Date: ${date}
 Message: ${message}`;
 
   // Replace with your WhatsApp number (include country code, no "+" sign)
-  let url = `https://wa.me/+44 7726 290945?text=${encodeURIComponent(whatsappMessage)}`;
+  let url = `https://wa.me/+447726290945?text=${encodeURIComponent(whatsappMessage)}`;
 
   window.open(url, "_blank"); 
 });
+
+
+
 </script>
 
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 
 </body>
 
 </html>
+
