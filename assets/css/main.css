@@ -22,7 +22,7 @@
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #2c3031; /* Default color used for the majority of the text content across the entire website */
+  --default-color: #049ebb; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #18444c; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #049ebb; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
@@ -5948,4 +5948,128 @@ section,
 /* If you have specific text-shadow for readability, keep it */
 .image-overlay .service-details {
     text-shadow: 0 0 4px rgba(0,0,0,0.9); /* Adds a subtle shadow to make white text pop on complex backgrounds */
+}
+
+/*--------------------------------------------------------------
+# Flexible Service Options Section
+--------------------------------------------------------------*/
+.service-options .service-option-card {
+  background: var(--surface-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  border-top: 5px solid color-mix(in srgb, var(--accent-color), transparent 70%);
+  height: 100%;
+}
+
+.service-options .service-option-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.service-options .header-content {
+  text-align: center;
+  padding: 30px 20px 20px 20px;
+  background-color: color-mix(in srgb, var(--background-color), transparent 5%);
+  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+.service-options .icon-circle {
+  width: 70px;
+  height: 70px;
+  line-height: 0;
+  margin: 0 auto 15px auto;
+  background: var(--accent-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.service-options .icon-circle i {
+  font-size: 30px;
+  color: var(--contrast-color);
+}
+
+.service-options .header-content h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 0;
+  color: var(--heading-color);
+}
+
+.service-options .body-content {
+  padding: 30px 30px 40px 30px;
+}
+
+.service-options .body-content h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--accent-color);
+  margin-bottom: 15px;
+}
+
+.service-options .body-content p {
+  font-size: 15px;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.service-options .feature-list li {
+  padding: 5px 0;
+  font-size: 15px;
+  color: color-mix(in srgb, var(--default-color), transparent 10%);
+}
+
+.service-options .feature-list i {
+  color: var(--accent-color);
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+/* Featured Option Styling */
+.service-options .service-option-card.featured-option {
+  border-top: 5px solid var(--accent-color);
+  box-shadow: 0 8px 25px color-mix(in srgb, var(--accent-color), transparent 70%);
+}
+
+.service-options .service-option-card.featured-option:hover {
+  transform: translateY(-8px);
+}
+
+/* Action Button Styles (for the two button types) */
+.service-options .btn-outline-accent {
+  display: inline-block;
+  padding: 10px 25px;
+  border-radius: 50px;
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+  font-weight: 600;
+  transition: all 0.3s;
+  font-size: 14px;
+}
+
+.service-options .btn-outline-accent:hover {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+}
+
+.service-options .btn-accent-filled {
+  display: inline-block;
+  padding: 10px 25px;
+  border-radius: 50px;
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  border: 2px solid var(--accent-color);
+  font-weight: 600;
+  transition: all 0.3s;
+  font-size: 14px;
+}
+
+.service-options .btn-accent-filled:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  border-color: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
